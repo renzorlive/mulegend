@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+    <h1>Stocks</h1>
+    {% for stock in stocks %}
+        <p> Stock Name: {{stock.stockname}} &nbsp&nbsp Shares: {{stock.amount}} &nbsp&nbsp Current Share Price: ${{stock.totalprice}} &nbsp&nbsp Total Stock Value: ${{stock.totalprice * stock.amount}}</p>
+    {% endfor %}
+    <p>Cash Ballance: {{cash_ballance}}</p>
+    <p>Total Ballance:{{total_ballance}}</p>
+{% endblock %}

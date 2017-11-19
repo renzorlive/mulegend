@@ -30,6 +30,10 @@ Session(app)
 # Configure CS50 Library to use SQLite database
 db = SQL("sqlite:///mashup.db")
 
+@app.route("/")
+def index():
+    return render_template("index.html")
+
 @app.route("/<string:filename>")
 def main(filename):
     """Render file."""
