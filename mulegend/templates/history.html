@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+    <h1>{{username}}'s transactions history</h1>
+    {% for row in history %}
+        <p> {{row.transaction}} {{row.amount}} share/s in stock {{row.stockname}} for {{row.transactionprice}} at {{row.date}}, {{row.time}}</p>
+    {% endfor %}
+{% endblock %}
